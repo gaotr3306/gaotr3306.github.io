@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Research | Tianrun Gao</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Research gallery */
+    .research-gallery {
+      margin-top: 55px;
+      padding-top: 35px;
+      border-top: 1px solid var(--line);
+    }
+
+    .research-gallery h2 {
+      margin: 0 0 5px;
+      font-size: 26px;
+    }
+
+    .gallery-intro {
+      margin: 0 0 25px;
+      color: var(--muted);
+    }
+
+    .research-media {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px 18px;
+    }
+
+    .research-media figure {
+      margin: 0;
+    }
+
+    .research-media video,
+    .research-media img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      background: #f7f9fc;
+    }
+
+    .research-media figcaption {
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.4;
+      text-align: center;
+    }
+
+    @media (max-width: 850px) {
+      .research-media {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 550px) {
+      .research-media {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body class="standard-page">
+
+  <div class="topbar">
+    <nav class="topbar-nav">
+      <a href="index.html">About</a>
+      <a href="publications.html">Publications</a>
+      <a class="active" href="research.html">Research</a>
+      <a href="academic.html">Academic</a>
+      <a href="cv/CV_Tianrun_Gao.pdf" target="_blank">CV</a>
+    </nav>
+  </div>
+
+  <main>
+
+    <section class="page-head">
+      <div class="wrap">
+        <h1>Research</h1>
+        <!-- <p>
+          Computational methods for large-scale multiphysics problems involving
+          moving interfaces, large deformation, and complex coupling.
+        </p> -->
+      </div>
+    </section>
+
+    <div class="wrap content">
+
+      <div class="tags">
+        <span class="tag">Material Point Method</span>
+        <span class="tag">Smoothed Particle Hydrodynamics</span>
+        <span class="tag">Fluid–Structure Interaction</span>
+        <span class="tag">Computational Fluid Dynamics</span>
+        <span class="tag">Meshless Methods</span>
+        <span class="tag">Thin-shell Mechanics</span>
+        <span class="tag">Multiphase Flow</span>
+        <span class="tag">Free-surface Flow</span>
+        <span class="tag">Adaptive Particle Refinement</span>
+        <span class="tag">Finite Volume Method</span>
+        <span class="tag">Discontinuous Galerkin Method</span>
+      </div>
+
+      <!-- Research areas: text only -->
+      <div class="research-card">
+        <h3>Particle-Grid Methods</h3>
+        <p>
+          Developing Particle-Grid Discontinuous Galerkin method for weakly and strongly compressible flows.
+        </p>
+      </div>
+
+        <div class="research-card">
+        <h3>Fluid-Structure Interaction</h3>
+        <p>
+          Numerical frameworks for coupled fluid and structural dynamics,
+          including thin structures, moving interfaces, and large deformation.
+        </p>
+      </div>
+
+        <div class="research-card">
+        <h3>Thin Shell Solver</h3>
+        <p>
+          Numerical frameworks for thin shell structures based on meshless methods, 
+          including semi-meshless FV method and MPM.
+        </p>
+      </div>
+
+      <!-- Research areas: text only -->
+      <div class="research-card">
+        <h3>Multi-resolution Meshless Methods</h3>
+        <p>
+          Developing efficient and accurate Multi-resolution for SPH, especially for FSI problems.
+        </p>
+      </div>
+
+        <div class="research-card">
+        <h3>Coupling Between Different Methods</h3>
+        <p>
+          Developing algorithms for new methods coupling meshless and mesh-based approaches.
+        </p>
+      </div>
+
+      <div class="research-card">
+        <h3>Multiphysics &amp; Complex Flows</h3>
+        <p>
+          Methods for free-surface flow, multiphase flow, high-Reynolds-number flow,
+          weakly/strongly compressible flow, 
+           and high-performance scientific computing at large scales.
+        </p>
+      </div>
+
+        <div class="research-card">
+        <h3>High-order methods</h3>
+        <p>
+          Developing high-order-accuracy method for SPH simulations.
+        </p>
+      </div>
+
+      <!-- All media collected at the bottom -->
+      <section class="research-gallery">
+
+        <h2>Research Gallery</h2>
+
+        <p class="gallery-intro">
+          Selected numerical simulations are conducted using SPH, FVM, MPM, PG-DG.
+        </p>
+
+        <div class="research-media">
+
+          <figure>
+            <video autoplay loop muted playsinline preload="metadata">
+              <source src="assets/research/ellip_bapr.mp4" type="video/mp4">
+            </video>
+            <figcaption>Resolved vorticity (BAPR SPH)</figcaption>
+          </figure>
+
+          <figure>
+            <video autoplay loop muted playsinline preload="metadata">
+              <source src="assets/research/entry_cylin_bapr.mp4" type="video/mp4">
+            </video>
+            <figcaption>Water entry (BAPR SPH)</figcaption>
+          </figure>
+
+          <figure>
+            <video autoplay loop muted playsinline preload="metadata">
+              <source src="assets/research/fsi_cylin_bapr.mp4" type="video/mp4">
+            </video>
+            <figcaption>Vortex-induced flapping beam (BAPR SPH)</figcaption>
+          </figure>
+
+          <figure>
+            <video autoplay loop muted playsinline preload="metadata">
+              <source src="assets/research/Fish.mp4" type="video/mp4">
+            </video>
+            <figcaption>Fish-flow interaction (IAPR SPH)</figcaption>
+          </figure>
+
+
+          <figure>
+            <img
+              src="assets/research/fsi_shell.gif"
+              alt="Fluid-shell interaction"
+              loading="lazy">
+            <figcaption>Flag flapping (SPH shell)</figcaption>
+          </figure>
+
+          <figure>
+            <video autoplay loop muted playsinline preload="metadata">
+              <source src="assets/research/pinch_cylin.mp4" type="video/mp4">
+            </video>
+            <figcaption>Deformed cylinder shell (FV shell)</figcaption>
+          </figure>
+
+          <figure>
+            <video autoplay loop muted playsinline preload="metadata">
+              <source src="assets/research/pinch_cylin_elasp.mp4" type="video/mp4">
+            </video>
+            <figcaption>Pinched cylinder shell (FV shell)</figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="assets/research/square_tube.gif"
+              alt="Square-tube simulation"
+              loading="lazy">
+            <figcaption>Square-tube buckling (FV shell)</figcaption>
+          </figure>
+
+          <figure>
+            <video autoplay loop muted playsinline preload="metadata">
+              <source src="assets/research/turbine.mp4" type="video/mp4">
+            </video>
+            <figcaption>High-Mach-number turbine flow (SPH-FV)</figcaption>
+          </figure>
+
+          <figure>
+            <video autoplay loop muted playsinline preload="metadata">
+              <source src="assets/research/5ring.mp4" type="video/mp4">
+            </video>
+            <figcaption>Ring collision (MPM shell)</figcaption>
+          </figure>
+
+        <figure>
+            <img
+                src="assets/research/pgdg_ph3.jpg"
+                alt="Three-phase multiphase flow (PG-DG)"
+                loading="lazy"
+            >
+            <figcaption>Three-phase strongly compressible multiphase flow (PG-DG)</figcaption>
+        </figure>
+
+        <figure>
+            <img
+                src="assets/research/pgdg_mach6.jpg"
+                alt="Mach-6 air impact on water (PG-DG)"
+                loading="lazy"
+            >
+            <figcaption>Mach-6 air impact on water (PG-DG)</figcaption>
+        </figure>
+
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <span>© 2026 Tianrun Gao</span>
+      <span><a href="index.html">Home</a></span>
+    </div>
+  </footer>
+
+</body>
+</html>
