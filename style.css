@@ -481,7 +481,7 @@ a:hover {
     padding:72px 72px 80px
 } */
 
-.home-main {
+/* .home-main {
     margin-left: 390px;
 
     width: 900px;
@@ -490,6 +490,14 @@ a:hover {
     padding: 72px 40px 80px;
 
     margin-right: auto;
+} */
+.home-main {
+    margin-left: 370px;
+
+    width: calc(100vw - 430px);
+    max-width: none;
+
+    padding: 72px 40px 80px;
 }
 
 .home-main > * {
@@ -531,7 +539,7 @@ a:hover {
     font-size:19px;
     line-height:1.7;
     color:#475467;
-    max-width:760px;
+    max-width:900px;
     margin:0
 }
 
@@ -559,7 +567,7 @@ a:hover {
 } */
 .edu-row {
     display: grid;
-    grid-template-columns: 110px 190px minmax(420px, 1fr);
+    grid-template-columns: 110px 240px minmax(350px, 1fr);
     gap: 20px;
 
     padding: 13px 8px;
@@ -969,5 +977,63 @@ a:hover {
         grid-template-columns: 1fr;
     }
 
+}
+.calligraphy-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+
+    margin-top: 30px;
+}
+
+.calligraphy-gallery .featured-calligraphy {
+    grid-column: 1 / -1;
+}
+
+.calligraphy-gallery figure {
+    margin: 0;
+}
+
+.calligraphy-gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+
+    border: 1px solid var(--line);
+    background: #fff;
+}
+
+.calligraphy-gallery figcaption {
+    margin-top: 9px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* =========================================================
+   Home Banner
+   ========================================================= */
+
+.home-banner {
+    width: 95%;
+    height: 275px;
+
+    background-image: url("assets/backg11.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    margin-bottom: 45px;
+}
+
+/* ===== Wider Home Content ===== */
+
+
+
+.home-intro,
+.home-section {
+    width: 95%;
+    max-width: none;
 }
 
