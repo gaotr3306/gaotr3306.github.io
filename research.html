@@ -1,5 +1,7 @@
+
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -9,9 +11,10 @@
   <style>
     /* Research gallery */
     .research-gallery {
-      margin-top: 55px;
-      padding-top: 35px;
-      border-top: 1px solid var(--line);
+      margin-top: 0;
+      padding-top: 0;
+      padding-bottom: 35px;
+      border-bottom: 1px solid var(--line);
     }
 
     .research-gallery h2 {
@@ -39,7 +42,7 @@
       display: block;
       width: 100%;
       aspect-ratio: 16 / 9;
-      object-fit: cover;
+      object-fit: contain;
       border: 1px solid var(--line);
       border-radius: 5px;
       background: #f7f9fc;
@@ -51,6 +54,10 @@
       font-size: 13px;
       line-height: 1.4;
       text-align: center;
+    }
+
+    .research-areas {
+      margin-top: 45px;
     }
 
     @media (max-width: 850px) {
@@ -69,6 +76,8 @@
 
 <body class="standard-page">
 
+  <!-- Top Navigation -->
+
   <div class="topbar">
     <nav class="topbar-nav">
       <a href="index.html">About</a>
@@ -81,88 +90,20 @@
 
   <main>
 
+    <!-- Page Header -->
+
     <section class="page-head">
       <div class="wrap">
         <h1>Research</h1>
-        <!-- <p>
-          Computational methods for large-scale multiphysics problems involving
-          moving interfaces, large deformation, and complex coupling.
-        </p> -->
       </div>
     </section>
 
     <div class="wrap content">
 
-      <div class="tags">
-        <span class="tag">Material Point Method</span>
-        <span class="tag">Smoothed Particle Hydrodynamics</span>
-        <span class="tag">Fluid–Structure Interaction</span>
-        <span class="tag">Computational Fluid Dynamics</span>
-        <span class="tag">Meshless Methods</span>
-        <span class="tag">Thin-shell Mechanics</span>
-        <span class="tag">Multiphase Flow</span>
-        <span class="tag">Free-surface Flow</span>
-        <span class="tag">Adaptive Particle Refinement</span>
-        <span class="tag">Finite Volume Method</span>
-        <span class="tag">Discontinuous Galerkin Method</span>
-      </div>
+      <!-- ========================================
+           Research Gallery - FIRST SECTION
+           ======================================== -->
 
-      <!-- Research areas: text only -->
-      <div class="research-card">
-        <h3>Particle-Grid Methods</h3>
-        <p>
-          Developing Particle-Grid Discontinuous Galerkin method for weakly and strongly compressible flows.
-        </p>
-      </div>
-
-        <div class="research-card">
-        <h3>Fluid-Structure Interaction</h3>
-        <p>
-          Numerical frameworks for coupled fluid and structural dynamics,
-          including thin structures, moving interfaces, and large deformation.
-        </p>
-      </div>
-
-        <div class="research-card">
-        <h3>Thin Shell Solver</h3>
-        <p>
-          Numerical frameworks for thin shell structures based on meshless methods, 
-          including semi-meshless FV method and MPM.
-        </p>
-      </div>
-
-      <!-- Research areas: text only -->
-      <div class="research-card">
-        <h3>Multi-resolution Meshless Methods</h3>
-        <p>
-          Developing efficient and accurate Multi-resolution for SPH, especially for FSI problems.
-        </p>
-      </div>
-
-        <div class="research-card">
-        <h3>Coupling Between Different Methods</h3>
-        <p>
-          Developing algorithms for new methods coupling meshless and mesh-based approaches.
-        </p>
-      </div>
-
-      <div class="research-card">
-        <h3>Multiphysics &amp; Complex Flows</h3>
-        <p>
-          Methods for free-surface flow, multiphase flow, high-Reynolds-number flow,
-          weakly/strongly compressible flow, 
-           and high-performance scientific computing at large scales.
-        </p>
-      </div>
-
-        <div class="research-card">
-        <h3>High-order methods</h3>
-        <p>
-          Developing high-order-accuracy method for SPH simulations.
-        </p>
-      </div>
-
-      <!-- All media collected at the bottom -->
       <section class="research-gallery">
 
         <h2>Research Gallery</h2>
@@ -201,12 +142,12 @@
             <figcaption>Fish-flow interaction (IAPR SPH)</figcaption>
           </figure>
 
-
           <figure>
             <img
               src="assets/research/fsi_shell.gif"
               alt="Fluid-shell interaction"
-              loading="lazy">
+              loading="lazy"
+            >
             <figcaption>Flag flapping (SPH shell)</figcaption>
           </figure>
 
@@ -228,7 +169,8 @@
             <img
               src="assets/research/square_tube.gif"
               alt="Square-tube simulation"
-              loading="lazy">
+              loading="lazy"
+            >
             <figcaption>Square-tube buckling (FV shell)</figcaption>
           </figure>
 
@@ -246,25 +188,109 @@
             <figcaption>Ring collision (MPM shell)</figcaption>
           </figure>
 
-        <figure>
+          <figure>
             <img
-                src="assets/research/pgdg_ph3.jpg"
-                alt="Three-phase multiphase flow (PG-DG)"
-                loading="lazy"
+              src="assets/research/pgdg_ph3.jpg"
+              alt="Three-phase multiphase flow (PG-DG)"
+              loading="lazy"
             >
-            <figcaption>Three-phase strongly compressible multiphase flow (PG-DG)</figcaption>
-        </figure>
+            <figcaption>
+              Three-phase strongly compressible multiphase flow (PG-DG)
+            </figcaption>
+          </figure>
 
-        <figure>
+          <figure>
             <img
-                src="assets/research/pgdg_mach6.jpg"
-                alt="Mach-6 air impact on water (PG-DG)"
-                loading="lazy"
+              src="assets/research/pgdg_mach6.jpg"
+              alt="Mach-6 air impact on water (PG-DG)"
+              loading="lazy"
             >
             <figcaption>Mach-6 air impact on water (PG-DG)</figcaption>
-        </figure>
+          </figure>
+
+        </div>
+
+      </section>
 
 
+      <!-- ========================================
+           Research Areas - SECOND SECTION
+           ======================================== -->
+
+      <section class="research-areas">
+
+        <h2>Research Areas</h2>
+
+        <div class="tags">
+          <span class="tag">Material Point Method</span>
+          <span class="tag">Smoothed Particle Hydrodynamics</span>
+          <span class="tag">Fluid–Structure Interaction</span>
+          <span class="tag">Computational Fluid Dynamics</span>
+          <span class="tag">Meshless Methods</span>
+          <span class="tag">Thin-shell Mechanics</span>
+          <span class="tag">Multiphase Flow</span>
+          <span class="tag">Free-surface Flow</span>
+          <span class="tag">Adaptive Particle Refinement</span>
+          <span class="tag">Finite Volume Method</span>
+          <span class="tag">Discontinuous Galerkin Method</span>
+        </div>
+
+        <div class="research-card">
+          <h3>Particle-Grid Methods</h3>
+          <p>
+            Developing Particle-Grid Discontinuous Galerkin method
+            for weakly and strongly compressible flows.
+          </p>
+        </div>
+
+        <div class="research-card">
+          <h3>Fluid-Structure Interaction</h3>
+          <p>
+            Numerical frameworks for coupled fluid and structural
+            dynamics, including thin structures, moving interfaces,
+            and large deformation.
+          </p>
+        </div>
+
+        <div class="research-card">
+          <h3>Thin Shell Solver</h3>
+          <p>
+            Numerical frameworks for thin shell structures based on
+            meshless methods, including semi-meshless FV method and MPM.
+          </p>
+        </div>
+
+        <div class="research-card">
+          <h3>Multi-resolution Meshless Methods</h3>
+          <p>
+            Developing efficient and accurate Multi-resolution for SPH,
+            especially for FSI problems.
+          </p>
+        </div>
+
+        <div class="research-card">
+          <h3>Coupling Between Different Methods</h3>
+          <p>
+            Developing algorithms for new methods coupling meshless
+            and mesh-based approaches.
+          </p>
+        </div>
+
+        <div class="research-card">
+          <h3>Multiphysics &amp; Complex Flows</h3>
+          <p>
+            Methods for free-surface flow, multiphase flow,
+            high-Reynolds-number flow, weakly/strongly compressible
+            flow, and high-performance scientific computing
+            at large scales.
+          </p>
+        </div>
+
+        <div class="research-card">
+          <h3>High-order methods</h3>
+          <p>
+            Developing high-order-accuracy method for SPH simulations.
+          </p>
         </div>
 
       </section>
@@ -272,6 +298,8 @@
     </div>
 
   </main>
+
+  <!-- Footer -->
 
   <footer class="site-footer">
     <div class="wrap footer-inner">
